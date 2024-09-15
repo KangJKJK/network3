@@ -17,6 +17,12 @@ req() {
   read -r
 }
 
+# /root/ubuntu-node 폴더가 존재하면 삭제합니다.
+if [ -d "/root/ubuntu-node" ]; then
+  echo -e "${RED}/root/ubuntu-node 폴더가 존재하므로 삭제합니다.${NC}"
+  sudo rm -rf /root/ubuntu-node
+fi
+
 # 홈 디렉토리로 이동합니다.
 cd $HOME
 
@@ -30,7 +36,7 @@ cd ubuntu-node
 
 # 새로운 screen 세션을 생성하여 노드를 실행합니다.
 sudo apt-get update
-sudo apt-get install screen
+sudo apt-get install -y screen
 screen -dmS network3 sudo bash manager.sh up
 
 # 노드의 개인키 및 본인의 IP를 표시합니다.
