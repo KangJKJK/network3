@@ -28,8 +28,10 @@ rm -rf ubuntu-node-v2.1.0.tar && \
 # 압축 해제된 ubuntu-node 디렉토리로 이동합니다.
 cd ubuntu-node
 
-# 노드를 실행합니다.
-sudo bash manager.sh up
+# 새로운 screen 세션을 생성하여 노드를 실행합니다.
+sudo apt-get update
+sudo apt-get install screen
+screen -dmS node_session sudo bash manager.sh up
 
 # 노드의 개인키 및 본인의 IP를 표시합니다.
 req "노드의 개인키를 확인하시고 적어두세요." sudo bash manager.sh key
