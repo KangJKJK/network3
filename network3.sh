@@ -34,7 +34,7 @@ sudo apt-get install screen
 screen -dmS network3 sudo bash manager.sh up
 
 # 노드의 개인키 및 본인의 IP를 표시합니다.
-req "노드의 개인키를 확인하시고 적어두세요." sudo bash manager.sh key
+req "노드의 개인키를 확인하시고 적어두세요." sudo bash /root/ubuntu-node/manager.sh key
 IP_ADDRESS=$(curl -s ifconfig.me)
 req "사용자의 IP는 ${IP_ADDRESS}입니다." echo "사용자의 IP는 ${IP_ADDRESS}입니다."
 
