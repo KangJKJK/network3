@@ -42,7 +42,7 @@ screen -dmS network3 sudo bash manager.sh up
 # 노드의 개인키 및 본인의 IP를 표시합니다.
 req "노드의 개인키를 확인하시고 적어두세요." sudo bash /root/ubuntu-node/manager.sh key
 IP_ADDRESS=$(curl -s ifconfig.me)
-req "사용자의 IP는 ${IP_ADDRESS}입니다." echo "사용자의 IP는 ${IP_ADDRESS}입니다."
+req "사용자의 IP주소를 확인합니다." echo "사용자의 IP는 ${IP_ADDRESS}입니다."
 
 # 웹계정과의 연동을 진행합니다.
 URL="https://account.network3.ai/main?o=${IP_ADDRESS}:8080"
