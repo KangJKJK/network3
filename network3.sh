@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # 색깔 변수 정의
+BOLD='\033[1m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
@@ -44,10 +45,10 @@ req "사용자의 IP주소를 확인합니다." echo "사용자의 IP는 ${IP_AD
 
 # 웹계정과의 연동을 진행합니다.
 URL="https://account.network3.ai/main?o=${IP_ADDRESS}:8080"
-echo -e "${YELLOW}웹계정과 연동을 진행합니다.${NC}"
+echo -e "${GREEN}웹계정과 연동을 진행합니다.${NC}"
 echo -e "${YELLOW}다음 URL로 접속하세요: ${URL}${NC}"
 echo -e "${YELLOW}대시보드에서 현재 노드의 패널 우측 상단에 있는 +버튼을 클릭하여 노드의 개인키를 적어주세요.${NC}"
-echo -e "${YELLOW}계속 진행하려면 엔터를 눌러 주세요.${NC}"
+echo -e "${BOLD}계속 진행하려면 엔터를 눌러 주세요.${NC}"
 read -r
 
 echo -e "${GREEN}모든 작업이 완료되었습니다. 컨트롤+A+D로 스크린을 종료해주세요.${NC}"
