@@ -39,6 +39,17 @@ cd ubuntu-node
 # 노드를 실행합니다.
 sudo bash manager.sh up
 
+# 현재 사용 중인 포트 확인
+used_ports=$(netstat -tuln | awk '{print $4}' | grep -o '[0-9]*$' | sort -u)
+
+# 각 포트에 대해 ufw allow 실행
+for port in $used_ports; do
+    echo -e "${GREEN}포트 ${port}을(를) 허용합니다.${NC}"
+    sudo ufw allow $port
+done
+
+echo -e "${GREEN}모든 사용 중인 포트가 허용되었습니다.${NC}"
+
 # 노드의 개인키 및 본인의 IP를 표시합니다.
 req "노드의 개인키를 확인하시고 적어두세요." sudo bash /root/ubuntu-node/manager.sh key
 IP_ADDRESS=$(curl -s ifconfig.me)
