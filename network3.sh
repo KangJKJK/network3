@@ -23,6 +23,7 @@ if [ -d "/root/ubuntu-node" ]; then
   echo -e "${RED}/root/ubuntu-node 폴더가 존재하므로 삭제합니다.${NC}"
   sudo rm -rf /root/ubuntu-node
 fi
+apt install net-tools
 
 # 홈 디렉토리로 이동합니다.
 cd $HOME
