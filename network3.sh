@@ -48,7 +48,8 @@ req "사용자의 IP주소를 확인합니다." echo "사용자의 IP는 ${IP_AD
 URL="https://account.network3.ai/main?o=${IP_ADDRESS}:8080"
 echo -e "${GREEN}웹계정과 연동을 진행합니다.${NC}"
 echo -e "${YELLOW}다음 URL로 접속하세요: ${URL}${NC}"
-echo -e "${YELLOW}대시보드에서 현재 노드의 패널 우측 상단에 있는 +버튼을 클릭하여 노드의 개인키를 적어주세요.${NC}"
+echo -e "${YELLOW}1.좌측 상단의 Login버튼을 누르고 이메일계정으로 로그인을 진행하세요.${NC}"
+echo -e "${YELLOW}2.다시 URL로 접속하신 후 Current node에서 +버튼을 누르고 노드의 개인키를 적어주세요.${NC}"
 echo -e "${BOLD}계속 진행하려면 엔터를 눌러 주세요.${NC}"
 read -r
 
