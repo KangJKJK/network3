@@ -29,9 +29,9 @@ apt install net-tools
 cd $HOME
 
 # 지정된 URL에서 ubuntu-node-v2.1.0.tar 파일을 다운로드합니다.
-wget https://network3.io/ubuntu-node-v2.1.1.tar && \
-tar -xf ubuntu-node-v2.1.1.tar && \
-rm -rf ubuntu-node-v2.1.1.tar && \
+wget https://network3.io/ubuntu-node-v2.1.1.tar.gz && \
+tar -xf ubuntu-node-v2.1.1.tar.gz && \
+rm -rf ubuntu-node-v2.1.1.tar.gz && \
 
 # 압축 해제된 ubuntu-node 디렉토리로 이동합니다.
 cd ubuntu-node
